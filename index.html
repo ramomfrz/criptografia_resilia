@@ -12,33 +12,34 @@
         <div class="container">
             <h1>FORMULÁRIO DE CODIFICAÇÃO</h1>
             <form>
-                <div class="box-area">
-                    <textarea placeholder="DIGITE AQUI SUA MENSAGEM" rows="5"></textarea>
+                <div class=" box-area">
+                    <textarea id="entrada" name="entrada" placeholder="DIGITE AQUI SUA MENSAGEM" rows="5"></textarea>
                 </div>
                 <div class="box-option">
                     <div class="select">
-                        <select name="selecao">
-                            <option>SELECIONE</option>
-                            <option>CIFRA DE CESAR</option>
-                            <option>BASE 64</option>
+                        <select name="select" id="select">
+                            <option value="selecione">SELECIONE</option>
+                            <option value="cesar">CIFRA DE CESAR</option>
+                            <option value="base64">BASE 64</option>
                         </select>
-                        <input type="number" placeholder="DESLOCAMENTO" disabled />
+                        <input id="disable" type="number" placeholder="DESLOCAMENTO" disabled />
                     </div>
                     <div class="box-radios">
-                        <label><input type="radio" name="cod">CODIFICAR</label>
-                        <label><input type="radio" name="cod">DECODIFICAR</label>
+                        <label><input id="codificar" type="radio" name="cod" value="cod">CODIFICAR</label>
+                        <label><input id="decodificar" type="radio" name="cod" value="decod">DECODIFICAR</label>
                     </div>
                 </div>
                 <div class="box-button">
-                    <button type="submit">MENSAGEM</button>
+                    <input type="submit" id="submit" value="MENSAGEM" />
                 </div>
                 <div class="box-areaResult">
-                    <textarea placeholder="RESULTADO DA CRIPTOGRAFIA" rows="5"></textarea>
+                    <textarea id="arearesultado" placeholder="RESULTADO DA CRIPTOGRAFIA" rows="5"></textarea>
                 </div>
             </form>
 
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
