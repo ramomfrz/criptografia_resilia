@@ -7,6 +7,7 @@ var decodificarMsg = document.getElementById('decodificar')
 var botaosubmit = document.getElementById('submit')
 var resultadoMsg = document.getElementById('arearesultado')
 
+
 select.addEventListener('change', function () {     // Função para ativar/desativar a caixa da opção do cesar  
     if (opcaoValor.selectedIndex == 1) {
         desativada.disabled = false
@@ -26,10 +27,19 @@ decodificarMsg.addEventListener('click', function () {
 
 botaosubmit.addEventListener('click', (function (eve) {
     eve.preventDefault();
-    result(textoentrada.value)
+    if (codificarMsg.checked && true) {
+        result(textoentrada.value)
+    } if (decodificarMsg.checked && true)
+        resultDescript(textoentrada.value)
 }))
 
-function result(texto) {
-    resultadoMsg.value = texto
 
+function result(texto) {
+    var resultCripto = btoa(texto)
+    resultadoMsg.value = resultCripto
+}
+
+function resultDescript(texto) {
+    var resultDescript = atob(texto)
+    resultadoMsg.value = resultDescript
 }
